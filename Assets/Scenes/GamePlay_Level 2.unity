@@ -461,8 +461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   Points: 0
-  ScoreToWin: 100
-  SceneToLoad: GamePlay_Level 2
+  ScoreToWin: 200
+  SceneToLoad: Win
   Pointsystem: {fileID: 768045396}
 --- !u!65 &749641440
 BoxCollider:
@@ -922,5 +922,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8948208555491486334, guid: 0b029d2c24f6e4ec4b66d9298f65a3ea,
+        type: 3}
+      propertyPath: spawnee.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948208555491486334, guid: 0b029d2c24f6e4ec4b66d9298f65a3ea,
+        type: 3}
+      propertyPath: spawnee.Array.data[4]
+      value: 
+      objectReference: {fileID: 3691523634527352635, guid: 26acd937936034a2a80672b5fb2a9eec,
+        type: 3}
+    - target: {fileID: 8948208555491486334, guid: 0b029d2c24f6e4ec4b66d9298f65a3ea,
+        type: 3}
+      propertyPath: spawnee.Array.data[5]
+      value: 
+      objectReference: {fileID: 6435644830576966087, guid: 331683ab1e6ed4600ab9d17647090864,
+        type: 3}
+    - target: {fileID: 8948208555491486334, guid: 0b029d2c24f6e4ec4b66d9298f65a3ea,
+        type: 3}
+      propertyPath: spawnee.Array.data[6]
+      value: 
+      objectReference: {fileID: 7289304840690337601, guid: 225799625892d43718f285cdb50749b7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b029d2c24f6e4ec4b66d9298f65a3ea, type: 3}

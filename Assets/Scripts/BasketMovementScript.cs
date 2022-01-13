@@ -8,6 +8,8 @@ public class BasketMovementScript : MonoBehaviour
 {
     public float speed;
     public float Points;
+    public float ScoreToWin;
+    public string SceneToLoad;
 
     public Text Pointsystem;
    
@@ -25,10 +27,10 @@ public class BasketMovementScript : MonoBehaviour
 
       Pointsystem.text = "Points: " + Points;
 
-      if(Points >= 100)
-        {
-            SceneManager.LoadScene("Win");
-        }
+      if(Points >= ScoreToWin)
+      {
+            SceneManager.LoadScene(SceneToLoad);
+      }
     }
 
     void OnCollisionEnter(Collision collision)
