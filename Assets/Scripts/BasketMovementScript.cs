@@ -15,18 +15,20 @@ public class BasketMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
       float horizontalInput = Input.GetAxis("Horizontal");
-
       transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
-
-        
-       
-
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Healthy")
+        {
+            Destroy(collision.gameObject);
+        }
 
-
-    
-
+        else if (collision.gameObject.tag == "Unhealthy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
