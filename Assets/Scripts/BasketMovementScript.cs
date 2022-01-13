@@ -12,11 +12,17 @@ public class BasketMovementScript : MonoBehaviour
     public string SceneToLoad;
 
     public Text Pointsystem;
+
+    public AudioClip[] audios;
+
+    public float Timer;
+    public Text TimerText;
    
     // Start is called before the first frame update
     void Start()
     {
         Pointsystem.text = "Points: " + Points;
+        TimerText.text = "Time Taken: " + Timer;
     }
 
     // Update is called once per frame
@@ -31,6 +37,9 @@ public class BasketMovementScript : MonoBehaviour
       {
             SceneManager.LoadScene(SceneToLoad);
       }
+
+        TimerText.text = "Time Taken: " + Timer;
+        Timer += Time.deltaTime;
     }
 
     void OnCollisionEnter(Collision collision)
