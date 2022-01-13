@@ -13,7 +13,7 @@ public class BasketMovementScript : MonoBehaviour
 
     public Text Pointsystem;
 
-    public AudioClip[] audios;
+    private AudioSource audioSource;
 
     public float Timer;
     public Text TimerText;
@@ -23,6 +23,7 @@ public class BasketMovementScript : MonoBehaviour
     {
         Pointsystem.text = "Points: " + Points;
         TimerText.text = "Time Taken: " + Timer;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class BasketMovementScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Points += 10;
+            audioSource.Play();
         }
 
         else if (collision.gameObject.tag == "Unhealthy")
