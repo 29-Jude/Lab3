@@ -24,6 +24,11 @@ public class BasketMovementScript : MonoBehaviour
       transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
 
       Pointsystem.text = "Points: " + Points;
+
+      if(Points >= 100)
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -37,6 +42,7 @@ public class BasketMovementScript : MonoBehaviour
         else if (collision.gameObject.tag == "Unhealthy")
         {
             Destroy(collision.gameObject);
+            SceneManager.LoadScene("Lose");
         }
     }
 }
